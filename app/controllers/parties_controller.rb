@@ -20,6 +20,9 @@ def create
 end 
 
 def edit 
+    @party = Party.find(params[:id])
+    if @party.params.empty?
+    end 
 
 end 
 
