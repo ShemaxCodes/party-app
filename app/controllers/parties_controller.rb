@@ -26,7 +26,6 @@ end
 
 def update
     @party = Party.find(params[:id])
-    byebug
     @party.update(party_params)
     redirect_to party_path(@party)
 end 

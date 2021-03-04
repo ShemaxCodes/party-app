@@ -4,16 +4,16 @@
 <%= form_tag parties_path do %>
 
 <label> Name: </label>
-<%= text_field_tag :name %><br><br>
+<%= text_field_tag :'party[name]' %><br><br>
 
 <label> Date: </label>
-<%= date_field_tag :date %><br><br>
+<%= date_field_tag :'party[date]' %><br><br>
 
 <label> Budget: </label>
-<%= number_field_tag :budget %><br><br>
+<%= number_field_tag :'party[budget]' %><br><br>
 
 <label> Private: </label>
-<%= check_box_tag :private %><br><br>
+<%= check_box_tag :'party[private]' %><br><br>
 
 <%= submit_tag 'Plan Party' %>
 
