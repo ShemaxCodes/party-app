@@ -14,8 +14,18 @@ end
 
 def create
     @party = Party.new(party_params)
+    byebug
     @party.save
     redirect_to party_path(@party)
+end 
+
+def edit 
+
+end 
+
+
+def update
+
 end 
 
 
@@ -23,7 +33,7 @@ end
 private
 
 def party_params
-    params.require(:party).permit(:name, :date, :budget, :private)
+    params.permit(:name, :date, :budget, :private)
 end 
 
 end
