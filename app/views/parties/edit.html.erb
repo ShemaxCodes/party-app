@@ -1,21 +1,21 @@
 <h1>List a Party </h1>
 
 <div>
-<%= form_tag parties_path do %>
+<%= form_for @party do |f| %>
 
 <label> Name: </label>
-<%= text_field_tag :name %><br><br>
+<%= f.text_field :name %><br><br>
 
 <label> Date: </label>
-<%= date_field_tag :date %><br><br>
+<%= f.date_field :date %><br><br>
 
 <label> Budget: </label>
-<%= number_field_tag :budget %><br><br>
+<%= f.number_field :budget %><br><br>
 
 <label> Private: </label>
-<%= check_box_tag :private %><br><br>
+<%= f.check_box :private %><br><br>
 
-<%= submit_tag 'Plan Party' %>
+<%= f.submit 'Plan Party' %>
 
 <% end %>
 </div>

@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 resources :parties, only: [:index, :new, :create]
 get '/parties/:id', to: 'parties#show', as: 'party'
 get '/parties/:id/edit', to: 'parties#edit', as: 'edit_party'
+patch '/parties/:id', to: 'parties#update'
 
 end
