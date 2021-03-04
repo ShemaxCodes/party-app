@@ -5,7 +5,7 @@ def index
 end 
 
 def show
-    @party = Party.find(params[:id])
+    get_party
 end 
 
 def new
@@ -14,18 +14,17 @@ end
 
 def create
     @party = Party.new(party_params)
-    byebug
     @party.save
     redirect_to party_path(@party)
 end 
 
 def edit 
-    @party = Party.find(params[:id])
+    get_party
 end 
 
 
 def update
-    @party = Party.find(params[:id])
+    get_party
     @party.update(party_params)
     redirect_to party_path(@party)
 end 
@@ -36,6 +35,10 @@ private
 
 def party_params
     params.require(:party).permit(:name, :date, :budget, :private)
+end 
+
+def get_party
+    @party = Party.find(params[:id])
 end 
 
 end
